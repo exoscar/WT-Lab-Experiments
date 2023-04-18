@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hangman</title>
+    <link rel="stylesheet" href="gamess.css">
+
+    <style>
+        #hngim{
+    width: 350px;
+    height: 346px;
+    background-image: url("1.jpg");
+}
+    </style>
+
+    <script>
+        var chks=true;
+        var winc=0;
+        var moves=8;
+        var cnt=0;
+        var le=0;
+        var gword="";
+        var imgss=['0.png', '1.png', '2.png', '3.png', '4.png', '5.png', '6.png', '7.png', '8.png'];
+        const words=["orange","egg","college","cricket","banana",'computer','envelop','javascript','aeroplane','biryani'];
+        function start(){
+            if(chks){
+            var gue=Math.floor(Math.random() * 10);
+             gword=words[gue];
+             le=gword.length;
+            var table = document.getElementById("hangtab");
+            var row = table.insertRow(0);
+
+            for(let i=0 ; i<le;i++){
+                row.insertCell(i).innerHTML="<button id='aples'> ♥  </button>";
+            }
+            chks=false;
+        }else{
+            location.reload();
+        }
+        }
+        /*document.addEventListener("onkeydown",function(event){
+            alert(event.key);
+            for(let i=0;i<le;i++){
+                if(event.key==gword[i]){
+                    var table = document.getElementById("hangtab");
+                    var row = table.insertRow(0);
+                    row.insertCell(i).innerHTML="<button>" + y+"     </button>";
+                }
+            }
+
+        });*/
+        function funs(){
+            var char=document.getElementById('inp').value;
+            var table=document.getElementById('hangtab');
+            var flag=true;
+            for(let i=0;i<le;i++){
+                
+                if(char==gword[i]){
+                    flag=false;
+                    table.rows[0].cells[i].innerHTML ="<button id='aples'>" + char+"     </button>";
+                    winc+=1;
+                }
+                
+
+            }
+         if (flag){
+            cnt=cnt+1;
+            document.getElementById('hngim').setAttribute("style", "background-image: url('"+imgss[cnt]+"')");
+            
+            moves=moves-1;
+            document.getElementById('mvs').innerHTML=moves;
+         }
+         if(moves==0){
+            alert("You Lost the Game");
+            
+         }
+         if (winc==le){
+                    alert("You Won the Game");
+                    
+                }
+         document.getElementById('inp').value="";
+        }
+        function rld(){
+            location.reload();
+        }
+    </script>
+</head>
+<body>
+    <h1 class="t">HANGMAN</h1>
+    <br>
+    <button class="b1" onclick="start()">Start</button>
+    <div class="flex-container">
+
+        <div class="flex-child magenta">
+          
+            <div id="dash">
+                <br>
+                <table id="hangtab">
+
+                </table>
+            </div>
+            <div>
+                <Table>
+                    <tr>
+                        <th class="Remaining">Remaining Moves : </th>
+                        <td><label class="mvs" id="mvs">7</label></td>
+                    </tr>
+                    
+                </Table>
+            </div>
+
+        </div>
+        
+        <div class="flex-child green">
+          <div id="hngim">
+
+          </div>
+        </div>
+        
+      </div>
+      <input class="txtbx" type="text" name="" id="inp">
+      <button class="check" onclick="funs()">Check</button>
+      <br>
+      <button class="reset" onclick="rld()">Reset</button>
+</body>
+</html>

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="lab2cs.css">
+    <title>Registration Form</title>
+   <style>
+    label{
+        color: bisque;
+    }
+   </style>
+</head> 
+<body>
+    <div class="me">
+    <h1 align="center">Registration Form</h1>
+    <form action="get/post" name="form1">
+        <table cell-spacing=20px cell-padding="0px">
+            <tr>
+               <td><label for="">Name</label></td>
+               <td><input type="text" name="uname" required></td>
+            </tr>
+            <tr>
+                <td><label for="dob">Date of Birth</label></td>
+                <td><input type="date"></td>
+
+            </tr>
+            <tr>
+                <td><label for="gender">Gender:</label></td>
+                <td><input type="radio" name="gen" id="asss">male</td>
+                <td><input type="radio" name="gen" id="asss">female</td>
+            </tr>
+            <tr>
+                <td><label for="emai">Email</label></td>
+                <td><input type="email"></td>
+            </tr>
+            <tr>
+                <td><label for="add">Address</label></td>
+                <td><input type="text"></td>
+
+            </tr>
+            <tr>
+                <td><label for="">Password</label></td>
+                <td><input type="password" name="psswd" required></td>
+            </tr>
+            <tr>
+                <td><label for="dep">Department</label></td>
+                <td>
+                    <select name="" id="" >
+                        <option value=""></option>
+                        <option value="">CSE</option>
+                        <option value="">ECE</option>
+                        <option value="">EEE</option>
+                    </select>
+                </td>
+
+            </tr>
+            <tr>
+                
+                    <td><label for="course">Course</label></td>
+                    <td><select name="" id="">
+                        <option value=""></option>
+                        <option value="">B.Tech</option>
+                        <option value="">M.Tech</option>
+                    </select></td>
+                
+
+            </tr>
+            <tr>
+                <td><label for="">Number</label></td>
+                <td><input type="number"></td>
+            </tr>
+            <tr>
+                <td><input id= "buts"value="Reset" type="reset" style="color: white;background-color: teal;"></td>
+                <td><input  id ="buts" value ="submit "type="submit" style="color: white; background-color: teal;"></td>
+            </tr>
+        </table>
+    </form>
+</div>
+<ul>
+    <li>Fill all the fields</li>
+    <li>T&C apply </li>
+
+</ul>
+<nav>
+    <a href="#" id="lsinks">Help</a>
+    <a href="index.html" target="_parent" id="lsinks">Home</a>
+</nav> 
+</body>
+</html>

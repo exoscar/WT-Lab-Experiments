@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="bilss.css">
+    <title>Document</title>
+
+    <style>
+        body{
+            background-image: url(pic1.png);
+            color:beige;
+            position:relative; 
+            left:80px; 
+            top:2px;
+            font-size:17px;
+        }
+        .quantity{
+            
+            position:relative; 
+            left:24px; 
+            top:2px;
+        }
+        
+        h1
+        {
+            font-family: "Times New Roman", Times, serif;
+            font-size: 50px;
+            position:relative; 
+            left:80px; 
+            top:2px;
+        }
+        .u{
+            text-decoration-thickness: 4px;
+        }
+        .h2
+        {
+            font-size: 30px;
+            position:relative; 
+            left:18px; 
+            top:2px; 
+        }
+        select{
+            position:relative; 
+            left:43px; 
+            top:2px;
+        }
+        button{
+            position:relative; 
+            left:60px; 
+            top:2px;
+        }
+        .t2
+        {
+            position:relative;
+            left:20px;
+            
+            padding:4px;
+            border-spacing:03px;
+            
+        }
+        .t
+        {
+            position:relative; 
+            left:2px; 
+            top:2px;
+            border-spacing:18px;
+        }
+    </style>
+
+
+    <script>
+
+    var name="";
+    var phne="";
+    var email="";
+    var cnt=1;
+    var curit=0;
+    const items = ["Chicken Biryani", "Mutton Biryani", "Chicken Tikka","Chicken kabab","Chicken 65","Chilli Chicken","Butter Naan","Garlic Naan","Butter Chicken","Butter Chicken","Panner Butter Masala","Any Drink"];
+        const price=[240,300,180,140,150,150,25,35,170,160,30];
+    function getperso(){
+        var y = document.querySelector('#itss').value;
+        
+        var qun=parseInt(document.getElementById("itqn"));
+        
+        var itns=document.getElementById("itnm").innerHTML=items[y];
+        var itpr=document.getElementById('itpr').innerHTML=price[y];
+         
+        
+}   
+function cal(){
+    var y = parseInt( document.querySelector('#itss').value);
+    var qun=parseInt(document.getElementById("itqn").value);
+    
+    var x=document.getElementById('itto').innerHTML=qun*parseInt( price[y]);
+}
+   
+    function addItems() {
+        var q=document.getElementById("itqn").value;
+        var y = document.querySelector('#itss').value;
+  var table = document.getElementById("seleitems");
+  var row = table.insertRow(cnt);
+  var cell1 = row.insertCell(0).innerHTML=cnt;
+  cnt=cnt+1;
+  var cell2 = row.insertCell(1).innerHTML=items[y];
+  var cell3 = row.insertCell(2).innerHTML=q;
+  var cell4 = row.insertCell(3).innerHTML=price[y];
+  var cell5=row.insertCell(4).innerHTML=q*price[y];
+  curit = curit+q*price[y];
+}
+function getot(){
+    var x = document.getElementById('tts').innerHTML=curit;
+    document.getElementById('tnm').innerHTML=document.getElementById('nami').value;
+    document.getElementById('tph').innerHTML=document.getElementById('phni').value;
+    document.getElementById('tne').innerHTML=document.getElementById('emai').value;
+    
+}
+    </script>
+</head>
+<body>
+    <h1>Canteen</h1>
+
+<div class="flex-container">
+
+    <div class="flex-child magenta" id="perso">
+        <table>
+        
+            <tr> <td><label for="nam" id="naml">Name: </label></td>  </tr>
+            <tr> <td><input type="text" id="nami"></td></tr>
+    
+            <tr> <td> <label for="phne" id="">Phone Number: </label></td></tr>
+            <tr>  <td><input type="number" id="phni"></td> </tr>
+            <tr> <td><label for="nam" id="emal">Email: </label></td> </tr>
+            <tr> <td><input type="email" id="emai"></td> </tr>
+         </table>
+    </div>
+    <br>
+    <br>
+    
+    <div class="flex-child green">
+      <table>
+        <form action="">
+            <Label> Choose Items: </Label>
+            <select name="" id="itss">
+                <option value="0">Chicken Biryani</option>
+                <option value="1">Mutton Biryani</option>
+                <option value="2">Chicken Tikka</option>
+                <option value="3">Chicken Kabab</option>
+                <option value="4">Chicken 65</option>
+                <option value="5">Chilli Chicken</option>
+                <option value="6">Butter Naan</option>
+                <option value="7">Garlic Naan</option>
+                <option value="8">Butter Chicken</option>
+                <option value="9">Panner Butter Masala</option>
+                <option value="10">Any Drink</option>
+            
+            </select>
+            
+        </form>
+        <button id="btn1" onclick="getperso()">Select</button>
+      </table>
+
+      <table>
+        <tr>
+            <td><label >Item Name: </label></td>
+            <td><label id="itnm"></label></td>
+        </tr>
+        <tr>
+            <td><label >Price: </label></td>
+            <td><label id="itpr" ></label></td>
+        </tr>
+        <tr>
+            <td><label >Quantity: </label></td>
+            <td><input type="number" onchange="cal()" id="itqn"></td>
+            
+        </tr>
+        <tr>
+            <td><label >Item Total: </label></td>
+            <td><label id="itto"></label></td>
+        </tr>
+        <tr>
+            <td><button onclick="addItems()" id="atc">Add to cart</button></td>
+        </tr>
+      </table>
+      <br>
+      
+
+      <h2>Select Items</h2>
+      <div>
+        <table id="seleitems" border="2px">
+            <tr>
+                <th>Sno</th>
+                <th>Item Name</th>
+                <th>Quantity</th>
+                <th>Unit Price</th>
+                <th>Item Total</th>
+            </tr>
+        </table>
+      </div>
+      <br>
+      <button id="final" onclick="getot()">Get Bill</button>
+
+    </div>
+    
+  </div>
+  <br><br>
+  
+  
+
+  <table>
+    <tr>
+        <th>Bill Generated</th>
+    </tr>
+    <tr>
+        <th>Name: </th>
+        <td><label id="tnm"></label></td>
+    </tr>
+    <tr>
+        <th>Phone no: </th>
+        <td><label id="tph"></label></td>
+    </tr>
+    <tr>
+        <th>Email: </th>
+        <td><label id="tne"></label></td>
+    </tr>
+    <tr>
+        <th><label > Grand Total: </label></th>
+        <td><label id="tts"></label></td>
+    </tr>
+  </table>
+
+</body>
+</html>

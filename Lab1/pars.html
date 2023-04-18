@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function pglod(){
+            alert("Page loaded succesfully!!!");
+        }
+        function zooms(){
+            document.getElementById("par1").style.backgroundColor="pink";
+
+        }
+        function colorchn(){
+            document.getElementById('par2').style.color="hotpink";
+            document.getElementById('par2').style.backgroundColor ="black";
+        }
+        
+    </script>
+</head>
+<body onload="pglod()">
+    <p id="par1">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nemo fugit optio veritatis et voluptas debitis obcaecati doloremque mollitia minima nostrum, facere rem perferendis molestias, possimus eum modi nam? Sit, perspiciatis!</p>
+    <button id="but1" onclick="zooms()">button for para1</button>
+    <p id="par2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla, asperiores. Molestiae deserunt recusandae iste provident corrupti, ab culpa optio, quas cupiditate a totam excepturi officia, eaque quibusdam maiores cum et!</p>
+    <button id="but2" onclick="colorchn()">button for para1</button>
+    <button ><a href="pars.html" style="text-decoration: none;"> Reset</a>   </button>
+</body>
+</html>

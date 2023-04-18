@@ -1,0 +1,48 @@
+body{
+    color: hotpink;
+    background-color: black;
+}
+#im4{
+    background-image: url("labs.jpg");
+}
+#im1{
+    background-image: url("ani.jpg");
+}
+#im2{
+    background-image: url("anis.jpg");
+}/*
+#im3{
+    border: 2px hotpink;
+    padding-left: 10px;
+    background-color: teal;
+    color: white;
+    width: 000px;
+    height: 000px;
+    border-radius:10px ;
+}*/
+.imgs{
+    width: 300px;
+    height: 200px;
+    transition: 0.5s;
+    border-radius: 50%;
+}
+h1{
+    padding-left: 40%;
+    text-decoration: wavy;
+}
+
+
+.imgs:hover{
+    border-radius: 0%;
+    
+}
+.tds:hover{
+background-color: teal;
+}
+h1{
+    color: hotpink;
+    text-decoration: dotted underline;
+}
+body{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}

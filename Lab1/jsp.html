@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: black;
+            color: hotpink;
+        }
+    </style>
+    <script>
+        function cngclr(){
+            var x=document.getElementById("ps1");
+            x.style.color="teal";
+        }
+        function cngstl(){
+            var y=document.getElementById("ps2");
+            y.style.fontFamily="Verdana, Geneva, Tahoma, sans-serif";
+        }
+        function cngsize(){
+            var x=document.getElementById("ps3");
+            x.style.fontSize="36px";
+        }
+        function calculator(){
+            var a= parseInt(document.getElementById("num1").value); 
+            var b=parseInt(document.getElementById('num2').value);
+            var opss=document.getElementsByName("opr");
+            var ops;
+            for( i=0;i<4;i++){
+                if(opss[i].checked){
+                    ops=opss[i].value;
+                }
+            }
+            var c;
+            
+            if (ops=="add"){
+                c=a+b;
+            }else if(ops=="sub"){
+                c=a-b;
+            }else if(ops=="mul"){
+                c=a*b;
+            }else if(ops=="div"){
+                c=a/b;
+            }
+            var ret = document.getElementById("ress").innerHTML=c;
+        }
+    </script>
+</head>
+<body>
+    <h1 id="header1">Games</h1>
+     <p id="ps1">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Corporis iure voluptas placeat rerum impedit nemo non cumque, totam vero similique architecto nisi, unde doloremque quaerat minima sunt enim? Iste, laudantium?</p>
+     <p id = "ps2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio asperiores dolorem repellat ullam aliquam ratione minus nesciunt dolores reiciendis, voluptatum dolorum voluptatem harum commodi qui excepturi aliquid nostrum ipsa impedit.</p>
+     <p id = "ps3" >Lorem ipsum dolr sit amet consectetur adipisicing elit. Ducimus voluptate dolor aspernatur ullam nesciunt cupiditate sit provident tempora. Aliquid at rerum culpa fugiat dolor quasi asperiores deleniti accusamus quaerat? Repudiandae.</p>
+     <div>
+        <button onclick="cngclr()">Change Color</button>
+        <button onclick="cngstl()">Change font</button>
+        <button onclick="cngsize()">Change size</button>
+     </div>
+    
+     <form >
+        <div>
+        <label for="">number 1</label>
+        <input type="number" id="num1"></div>
+        <div>
+        <label for="">number 2</label>
+        <input type="number" id="num2"></div>
+        
+        
+        <table>
+            <td><input type="radio" name="opr" id="csl" value="add">+</td>
+            <td><input type="radio" name="opr" id="csl" value="sub">-</td>
+            <td><input type="radio" name="opr" id="csl" value="mul">*</td>
+            <td><input type="radio" name="opr" id="csl" value="div">/</td>
+        </table>
+       
+     </form>
+     <button id="sus" onclick="calculator()">Calculate</button>
+     <label for="">Result :</label>
+        <label for="" id="ress">----</label>
+     
+      
+</body>
+</html>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: black;
+            color: hotpink;  
+        }
+        
+       
+    </style>
+    <script>
+       function perfrom(){
+        qwe=document.createElement("form");
+        var x=document.querySelector("#btn");
+        var y=document.querySelector("#optis");
+        var tmp=document.createElement("br");
+            document.body.appendChild(tmp);
+        if (y.value=="ta"){
+            var z=document.createElement("textarea");
+            qwe.appendChild(z);
+        }
+        else if(y.value=='tb'){   
+            var z=document.createElement('input');
+            qwe.appendChild(z);
+        }
+        else if(y.value=='radio'){
+            var z=document.createElement('input');
+            z.setAttribute("type","radio");
+           
+            var lab = document.createElement("label");
+            lab.innerText="apples";
+           qwe.appendChild(z);
+           qwe.appendChild(lab);
+            var tmp=document.createElement("br");
+            qwe.appendChild(tmp);
+        }
+        else{
+            var lab=document.createElement("label");
+            lab.innerText="python";
+            var c=document.createElement("input");
+            c.setAttribute("type","checkbox");
+            
+            qwe.appendChild(c);
+            qwe.appendChild(lab);
+        }
+        document.body.appendChild(qwe);
+       }
+       
+    </script>
+</head>
+<body>
+    <form for="optis" >
+        <label >Choose:</label>
+        <br>
+        <select id="optis">
+          <option value="ta" >TextArea</option>
+          <option value="tb" >Text box</option>
+          <option value="radio">Radio Button</option>
+          <option value="checkbox" >Check Box</option>
+        </select>
+        
+        
+      </form>
+      <button id="btn" onclick="perfrom()"> perform</button>
+      <form action="" id="frms"></form>
+     
+</body>
+</html>

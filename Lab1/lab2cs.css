@@ -1,0 +1,54 @@
+
+.me{
+    border: 5px outset ;
+    background-color: black;    
+    text-align: left;
+    color: white;
+    padding:  0% 0% 0% 40%;
+    
+
+    /*background-image:url("au.jpg")*/
+
+    
+  }
+  h1{
+    color: hotpink;
+    text-decoration: wavy underline;
+    text-decoration-color: whitesmoke;
+    text-align: center;
+    padding-right: 50%;
+  }
+  input{
+    background-color: rgb(65, 64, 64);
+    color: pink;
+  }
+#asss{
+    accent-color: hotpink;
+}
+#buts:hover{
+    background-color: teal;
+    color: black;
+}
+#lsinks{
+  flex: 50;
+   text-decoration: none;
+  outline: none;
+  text-align: center;
+  line-height: 5px;
+  transition: 0.3s;
+  color:blue;
+
+}
+#lsinks:hover{
+  color:green;
+}
+
+#lsinks:visited,#lsinks:focus{
+  background-color: pink;
+  color: teal;
+}
+
+label{
+  outline-color: pink;
+  outline: 1px;
+}

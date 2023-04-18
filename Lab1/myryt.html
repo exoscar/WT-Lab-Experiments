@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="homie.css">
+    <script>
+        function display(a){
+            var x=document.getElementById('tts');
+            x.style.width="300px";
+            x.style.height="200px";
+            x.style.backgroundColor="teal";
+            x.style.color="white";
+            
+            if (a==1){
+                var x=document.getElementById('tts').innerHTML="The department of CSE is going to conduct Techfest CURSORS2K23 on March 2nd and 3rd.";
+            }
+            else if(a==2){
+                var x=document.getElementById('tts').innerHTML="A computer lab is a space where computer services are provided to a defined community. These are typically public libraries and academic institutions. Generally, users must follow a certain user policy to retain access to the computers.";
+            }
+            else{
+                var x=document.getElementById('tts').innerHTML="The vision of the ANITS Engineering Library is to provide users seamless access to onsite and world-wide information services and to support the delivery of the information with a creative internal network of human and material resources.";
+            }
+        }
+        function closes(){
+            var x=document.getElementById('tts');
+            x.style.width="00px";
+            x.style.height="00px";
+            x.style.backgroundColor="black";
+            x.style.color="black";
+            
+        }
+    </script>
+</head>
+<body >
+    <h1>Welcome </h1>
+    <table>
+        <tr>
+            <td class="tds">
+                <div id="im1" class="imgs" onclick="display(1)" ondblclick="closes()"></div>
+            </td>
+        
+            <td class="tds">
+                <div id="im2" class="imgs" onclick="display(2)" ondblclick="closes()"></div>
+            </td>
+            
+            <td class="tds">
+                <div id="im4" class="imgs" onclick="display(3)" ondblclick="closes()"></div>
+            </td>
+        
+            
+        </tr>
+        <tr>
+            <td>
+                <div id="im3"><p id="tts"></p></div>
+            </td>
+                <p>Anil Neerukonda Institute of Technology and Sciences, was established in the Academic Year 2001–02 with the approval of the All India Council for Technology Education, New Delhi and the Government of Andhra Pradesh and is affiliated to Andhra University, Visakhapatnam</p>
+            
+        </tr>
+
+    </table>
+</body>
+</html>

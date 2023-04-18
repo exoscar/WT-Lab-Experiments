@@ -1,0 +1,15 @@
+html{
+    background-color: black;
+    color: hotpink;
+}
+h1{
+    padding-left: 40%;
+}
+
+.chc{
+    height: 200px;
+    width: 200px;
+    font-size: xx-large;
+    background-color: gray;
+    color: gold;
+}

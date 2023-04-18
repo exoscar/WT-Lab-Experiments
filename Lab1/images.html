@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Imagesss</title>
+    <link rel="stylesheet" href="image_c.css">
+    <script>
+        function cng(){
+            var imgs=document.getElementById('apls');
+            imgs.setAttribute('src',"download.jpeg");
+        }
+        function zms(){
+            var imgs=document.getElementById("zms");
+            imgs.style.width="500px";
+            imgs.style.height='300px';
+        }
+    </script>
+</head>
+<body bgcolor="Black" text="Hotpink">
+    <h1>Images</h1>
+    <table>
+        <tr>
+            <td>
+                <img src="ani.jpg" alt="anits photo" width="400px" height="200px" class="ims">
+            </td>
+            <td>
+                <img src="gvp.jpg" alt="GVP photo" width="400px" height="200px" class="ims" ondblclick="cng()" id="apls">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <img src="au.jpg" alt="AU photo" width="400px" height="200px" class="ims" onmouseover="zms()" id="zms">
+            </td>
+            <td>
+                <img src="jntk.jpg" alt="jntuk photo" width="400px" height="200px" class="ims">
+            </td>
+            
+        </tr>
+    </table>
+</body>
+</html>
